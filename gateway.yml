@@ -6,7 +6,12 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: auth-service
-          uri: lb://auth-service
+        - id: user-notif-service
+          uri: http://localhost:8083
           predicates:
             - Path=/api/auth/**
+            - Path=/api/users/**
+        - id: lamain-service
+          uri: lb://lamain-service
+          predicates:
+            - Path=/api/lamain/**
