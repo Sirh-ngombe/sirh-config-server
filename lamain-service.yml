@@ -28,3 +28,9 @@ spring:
         notificationTopic-out-0:
           destination: notifications
 
+jwt:
+  secret: c980bef910d21eed63b5d4ea82c575ce82022fd139c3a183c2a9d163f3f73e5251f80762b718b4b293bcc37ea7163f7f1b3cc9f0101508f845fec8409e18fa3c
+  expiration: 86400000
+  refresh-token:
+    expiration: 604800000
+
