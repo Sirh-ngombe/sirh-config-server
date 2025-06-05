@@ -10,7 +10,14 @@ spring:
           uri: lb://user-notif-service
           predicates:
             - Path=/api/auth/**
-            #- Path=/api/users/**
+        - id: user-notif-service-users
+          uri: lb://user-notif-service
+          predicates:
+            - Path=/api/users/**
+        - id: user-notif-service-static-files
+          uri: lb://user-notif-service
+          predicates:
+            - Path=/uploads/**
         - id: lamain-service
           uri: lb://lamain-service
           predicates:
