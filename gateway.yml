@@ -42,6 +42,8 @@ spring:
               - "*"
             allowCredentials: true
             maxAge: 3600
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
   
   security:
     oauth2:
