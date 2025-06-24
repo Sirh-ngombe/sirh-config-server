@@ -26,6 +26,22 @@ spring:
           uri: lb://lamain-service
           predicates:
             - Path=/api/lamain/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:4200"
+              - "https://votre-domaine-frontend.com"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+            maxAge: 3600
   
   security:
     oauth2:
