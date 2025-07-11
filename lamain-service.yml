@@ -34,3 +34,4 @@ jwt:
   refresh-token:
     expiration: 604800000
 
+user-notif.service.url=http://localhost:8083
