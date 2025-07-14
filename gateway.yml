@@ -26,8 +26,6 @@ spring:
           uri: lb://lamain-service
           predicates:
             - Path=/api/lamain/**
-          filters: # <--- Make sure this is indented correctly
-            - TokenRelay=
       globalcors:
         corsConfigurations:
           '[/**]':
