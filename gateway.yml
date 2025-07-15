@@ -22,10 +22,10 @@ spring:
           uri: lb://user-notif-service
           predicates:
             - Path=/api/profiles/**
-        - id: user-notif-service-analysis
+        - id: user-notif-service-analytics
           uri: lb://user-notif-service
           predicates:
-            - Path=/api/accounts/analysis/**
+            - Path=/api/accounts/analytics/**
         - id: lamain-service
           uri: lb://lamain-service
           predicates:
