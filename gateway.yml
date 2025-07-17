@@ -35,7 +35,8 @@ spring:
           '[/**]':
             allowedOrigins:
               - "http://localhost:4200"
-              #- "https://lamainapp.com"
+              - "https://lamainapp.com"
+              - "http://lamainapp.com"
             allowedMethods:
               - GET
               - POST
