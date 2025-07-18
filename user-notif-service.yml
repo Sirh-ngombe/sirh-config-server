@@ -20,16 +20,20 @@ spring:
   security:
     # Configurations de sécurité ici
   mail:
-    host: smtp.gmail.com
+    host: vps104756.serveur-vps.net
     port: 587
-    username: andoboys28@gmail.com
-    password: hfhn bsim ltxb alwt
+    username: lamainapp@ngombe.org
+    password: vKkH!3dTaPz
     properties:
       mail:
+        protocol: smtp
         smtp:
           auth: true
           starttls:
             enable: true
+        connectiontimeout: 5000
+        timeout: 5000
+        writetimeout: 5000
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
