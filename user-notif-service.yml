@@ -23,7 +23,7 @@ spring:
     host: vps104756.serveur-vps.net
     port: 587
     username: lamainapp@ngombe.org
-    password: @zU5nhPToDaS
+    password: zU5nhPToDaS
     properties:
       mail:
         protocol: smtp
