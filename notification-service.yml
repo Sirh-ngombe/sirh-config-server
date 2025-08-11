@@ -1,0 +1,49 @@
+# Configuration du serveur
+server:
+  port: 8085
+
+# Configuration de la base de données MySQL avec R2DBC
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/sirh_notification_service
+    username: root
+    password: 
+    generate-unique-names: true
+    initialization-mode: always
+    schema-locations: classpath:db/migration/V1__create_notification_table.sql
+  
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+  config:
+    import: optional:configserver:http://localhost:8888
+    
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+
+  # Configuration de Kafka
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: notification-group
+      auto-offset-reset: earliest
+    listener:
+      ack-mode: manual
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        acks: all
+
+# Nom du topic Kafka (configuration personnalisée)
+notification:
+  kafka:
+    topic: sirh-notifications
