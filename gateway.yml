@@ -30,6 +30,10 @@ spring:
           uri: lb://lamain-service
           predicates:
             - Path=/api/lamain/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/api/notifications/**
       globalcors:
         corsConfigurations:
           '[/**]':
