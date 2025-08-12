@@ -12,14 +12,6 @@ spring:
     initialization-mode: always
     schema-locations: classpath:db/migration/V1__create_notification_table.sql
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
-
   # Configuration de Kafka
   kafka:
     consumer:
