@@ -92,3 +92,7 @@ logging:
 #     urls:
 #       - 'http://localhost:8083/api/webhooks/notifications'
 #       - 'https://api.lamainapp.com/webhooks/notifications'
+
+notification:
+  kafka:
+    topic: sirh-notifications
