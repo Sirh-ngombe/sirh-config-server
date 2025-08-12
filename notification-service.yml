@@ -27,7 +27,10 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
+        # Indique à Spring de faire confiance aux packages pour la désérialisation JSON
         spring.json.trusted.packages: '*'
+        # Spécifie la classe cible par défaut pour la désérialisation de la valeur.
+        spring.json.value.default.type: com.ngombe.sirh.notification.dto.NotificationEventDto
     listener:
       ack-mode: manual
     template:
