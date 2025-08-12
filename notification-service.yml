@@ -11,14 +11,6 @@ spring:
     generate-unique-names: true
     initialization-mode: always
     schema-locations: classpath:db/migration/V1__create_notification_table.sql
-  
-  cloud:
-    config:
-      uri: http://localhost:8888
-      fail-fast: true
-  config:
-    import: optional:configserver:http://localhost:8888
-    
 
 eureka:
   client:
