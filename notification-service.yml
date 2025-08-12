@@ -2,6 +2,8 @@
 server:
   port: 8085
 
+spring.kafka.consumer.group-id: notification-group
+
 # Configuration de la base de données MySQL avec R2DBC
 spring:
   r2dbc:
