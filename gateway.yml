@@ -36,6 +36,7 @@ spring:
             - Path=/api/notifications/**
         - id: notification-service-webhook-subscriptions
           uri: lb://notification-service
+          predicates:
             - Path=/api/webhook-subscriptions/**
       globalcors:
         corsConfigurations:
