@@ -12,7 +12,7 @@ spring:
   # Configuration de Flyway pour la gestion du schéma
   flyway:
     enabled: true
-    url: jdbc:mysql://localhost:3306/sirh_notification_service # Notez le protocole JDBC ici
+    url: jdbc:mysql://localhost:3306/sirh_notification_service
     user: root
     password: ""
     locations: classpath:db/migration
