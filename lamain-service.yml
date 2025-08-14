@@ -35,3 +35,7 @@ jwt:
     expiration: 604800000
 
 user-notif.service.url: http://localhost:8083
+
+notification:
+  kafka:
+    topic: sirh-notifications
