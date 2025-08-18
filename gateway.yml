@@ -45,6 +45,7 @@ spring:
               - "http://localhost:4200"
               - "https://lamainapp.com"
               - "http://lamainapp.com"
+              - "http://www.lamainapp.com"
             allowedMethods:
               - GET
               - POST
