@@ -61,7 +61,7 @@ jwt:
 user-notif:
   service:
     url: http://user-notif-service:8083
-  base-url: http://localhost:8081
+  base-url: http://localhost:8083
 
 notification:
   kafka:
