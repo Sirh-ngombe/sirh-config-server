@@ -27,6 +27,26 @@ spring:
       bindings:
         notificationTopic-out-0:
           destination: notifications
+  
+  # Configuration de Kafka
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: sirh-notification-consumer
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        # Indique à Spring de faire confiance aux packages pour la désérialisation JSON
+        spring.json.trusted.packages: '*'
+        # Spécifie la classe cible par défaut pour la désérialisation de la valeur.
+        spring.json.value.default.type: com.ngombe.sirh.lamain_service.dto.NotificationEventDto
+        # Force le désérialiseur à ignorer l'en-tête de type, évitant ainsi l'erreur de "Class not found".
+        spring.json.use.type.headers: false
+    listener:
+      ack-mode: manual
+    template:
+      default-topic: sirh-notifications
 
 jwt:
   secret: c980bef910d21eed63b5d4ea82c575ce82022fd139c3a183c2a9d163f3f73e5251f80762b718b4b293bcc37ea7163f7f1b3cc9f0101508f845fec8409e18fa3c
