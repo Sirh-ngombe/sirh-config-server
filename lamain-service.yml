@@ -1,9 +1,6 @@
 server:
   port: 8082
 
-user-notif:
-  base-url: http://localhost:8081
-
 eureka:
   instance:
     prefer-ip-address: true
@@ -64,6 +61,7 @@ jwt:
 user-notif:
   service:
     url: http://user-notif-service:8083
+  base-url: http://localhost:8081
 
 notification:
   kafka:
