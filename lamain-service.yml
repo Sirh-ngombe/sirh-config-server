@@ -43,6 +43,13 @@ spring:
         spring.json.value.default.type: com.ngombe.sirh.lamain_service.dto.NotificationEventDto
         # Force le désérialiseur à ignorer l'en-tête de type, évitant ainsi l'erreur de "Class not found".
         spring.json.use.type.headers: false
+    # Configuration du producteur Kafka
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        acks: all
     listener:
       ack-mode: manual
     template:
