@@ -20,10 +20,10 @@ spring:
   security:
     # Configurations de sécurité ici
   mail:
-    host: vps104756.serveur-vps.net
+    host: smtp.gmail.com
     port: 587
-    username: lamainapp@ngombe.org
-    password: 4aeAgTJk!
+    username: lamainapp@gmail
+    password: Lanz92i@@@,,,
     properties:
       mail:
         protocol: smtp
@@ -62,7 +62,7 @@ spring:
               packages: '*'
     # Configuration du producteur Kafka
     producer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: kafka:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
