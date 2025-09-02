@@ -11,7 +11,7 @@ spring:
 
   # Configuration de Flyway pour la gestion du schéma
   flyway:
-    enabled: true
+    enabled: false
     url: jdbc:mysql://localhost:3306/sirh_notification_service
     user: root
     password: ""
