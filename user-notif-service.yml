@@ -23,7 +23,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: lamainapp@gmail.com
-    password: Lanz92i@@@,,,
+    password: vpad auqa knfh ywuq
     properties:
       mail:
         protocol: smtp
