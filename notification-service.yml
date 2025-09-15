@@ -38,14 +38,7 @@ spring:
     template:
       default-topic: sirh-notifications
 
-# Configuration Eureka
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-service:8761/eureka
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
+
 
 # Nom du topic Kafka (configuration personnalisée)
 notification:
